@@ -1,0 +1,273 @@
+/* Global Styles */
+:root {
+    --primary-color: #F39C12; /* Bright Yellow */
+    --secondary-color: #FF5733; /* Vibrant Orange */
+    --accent-color: #2C3E50; /* Deep Navy Blue */
+    --bg-color: #FFFFFF; /* White */
+    --text-color: #333333; /* Dark Gray for text */
+    --highlight-color: #E74C3C; /* Red for Highlights */
+    --button-color: #2980B9; /* Blue Button Color */
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 20px 0;
+}
+
+/* Hero Section */
+.hero {
+    background: url('your-image.jpg') no-repeat center center/cover;
+    color: var(--bg-color);
+    text-align: center;
+    padding: 120px 20px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-out;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Heartfelt Wishes */
+.heartfelt-wishes {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 50px 20px;
+    border-radius: 8px;
+    margin: 40px auto;
+    width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.heartfelt-wishes h2 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Memories Gallery */
+.memories-gallery {
+    background-color: var(--bg-color);
+    padding: 50px 20px;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-images img {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Timeline Section */
+.timeline {
+    padding: 50px 20px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.timeline .events {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.timeline .event {
+    background-color: var(--accent-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.timeline .event:hover {
+    transform: scale(1.05);
+}
+
+.timeline h3 {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Special Video Section */
+.special-video iframe {
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); /* Softer and stronger shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for box-shadow */
+    max-width: 100%;
+    width: 80%; /* Make the video responsive */
+    height: 400px; /* Set a consistent height */
+    margin: 0 auto; /* Center the video */
+    display: block;
+    background-color: #333; /* Set a dark background for the iframe */
+}
+
+/* Hover effect for Special Video Section */
+.special-video iframe:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4); /* Increased shadow for a more pronounced effect */
+}
+
+/* Countdown Section */
+#countdown {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--highlight-color);
+    margin-top: 20px;
+}
+
+/* Thank You Section */
+.thank-you {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    padding: 50px 20px;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+button {
+    background-color: var(--button-color);
+    color: var(--bg-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: #1C6B8F;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    /* Heartfelt Wishes */
+    .heartfelt-wishes {
+        width: 90%;
+    }
+
+    /* Memories Gallery */
+    .gallery-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-images img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /* Timeline Section */
+    .timeline .events {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline .event {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    /* Special Video Section */
+    .special-video iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Countdown Section */
+    #countdown {
+        font-size: 2rem;
+    }
+
+    /* Button Styles */
+    button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Heartfelt Wishes */
+    .heartfelt-wishes h2 {
+        font-size: 2rem;
+    }
+
+    /* Timeline Section */
+    .timeline .event {
+        width: 100%;
+    }
+
+    /* Special Video Section */
+    .special-video iframe {
+        height: 250px;
+    }
+
+    /* Countdown Section */
+    #countdown {
+        font-size: 1.8rem;
+    }
+}
