@@ -49,40 +49,35 @@ function launchConfetti() {
     // Remove confetti after 5 seconds
     setTimeout(() => {
       document.body.removeChild(confetti);
-    }, 5000);
+    }, 10000);
   }
   
-  // Background Music and Video Control
-  const music = document.getElementById("background-music");
-  const video = document.getElementById("birthday-video");
-  const musicBtn = document.getElementById("music-btn");
-  
-  // Toggle Music Play/Pause on Button Click
-  musicBtn.addEventListener("click", () => {
+  // Select elements
+const music = document.getElementById("background-music");
+const video = document.getElementById("birthday-video");
+const musicBtn = document.getElementById("music-btn");
+
+// Play/Pause Music on Button Click
+musicBtn.addEventListener("click", () => {
     if (music.paused) {
-      music.play();
-      musicBtn.textContent = "⏸ Pause Music";
+        music.play();
+        musicBtn.textContent = "⏸ Pause Music";
     } else {
-      music.pause();
-      musicBtn.textContent = "🎵 Play Music";
+        music.pause();
+        musicBtn.textContent = "🎵 Play Music";
     }
-  });
-  
-  // Pause music when video plays
-  video.addEventListener("play", () => {
-    music.pause();
-    musicBtn.textContent = "🎵 Play Music";
-  });
-  
-  // Resume music when video is paused
-  video.addEventListener("pause", () => {
+});
+
+// Pause music when video starts playing
+video.addEventListener("play", () => {
+    if (!music.paused) {
+        music.pause();
+        musicBtn.textContent = "🎵 Play Music"; // Update button text
+    }
+});
+
+// Resume music when video ends
+video.addEventListener("ended", () => {
     music.play();
-    musicBtn.textContent = "⏸ Pause Music";
-  });
-  
-  // Resume music when video ends
-  video.addEventListener("ended", () => {
-    music.play();
-    musicBtn.textContent = "⏸ Pause Music";
-  });
-  
+    musicBtn.textContent = "⏸ Pause Music"; // Update button text
+});
