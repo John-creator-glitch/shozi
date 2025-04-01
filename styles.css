@@ -519,13 +519,13 @@ body {
 
 /* Positioning for left and right balloons */
 .balloon-left {
-    left: 10px;
+    left: 20px;
     bottom: 0;
     /* You can adjust additional properties like transform if you want rotation */
 }
 
 .balloon-right {
-    right: 10px;
+    right: 20px;
     bottom: 0;
 }
 
