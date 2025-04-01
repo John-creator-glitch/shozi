@@ -7,16 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Music Controls -->
-    <div class="music-container">
-        <button id="music-btn">🎵 Play Music</button>
-    </div>
-
     <!-- Background Music -->
-    <audio id="background-music" loop>
-        <source src="music/background-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<audio id="background-music" loop>
+    <source src="music/background-music.mp3" type="audio/mp3">
+</audio>
+
+<!-- Music Control Button -->
+<button id="music-btn">🎵 Play Music</button>
 
     <div class="container">
         <h1>Happy Birthday Shahroz!</h1>
@@ -50,7 +47,7 @@
  <div class="video-section">
     <h2>Watch This Special Video</h2>
     <div class="video-container">
-        <video controls>
+        <video id="birthday-video" controls>
             <source src="videos/birthday-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
